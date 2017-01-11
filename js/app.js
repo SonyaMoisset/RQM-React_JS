@@ -31,7 +31,7 @@ class RandomQuoteMachine extends React.Component {
         }
     }
 
-    handleRandomQuote () {
+    setRandomQuote () {
         this.setState({
             quote: this.getRandomQuote()
         })
@@ -52,7 +52,7 @@ class RandomQuoteMachine extends React.Component {
                                 <QuoteContainer quote={ this.state.quote } />
                                 <div className="row">
                                     <div className="col-md-12">
-                                        <a className="btn btn-unique btn-lg btn-block btn-quote waves-effect waves-light" onClick={ this.handleRandomQuote.bind(this) }>
+                                        <a className="btn btn-unique btn-lg btn-block btn-quote waves-effect waves-light" onClick={ this.setRandomQuote.bind(this) }>
                                             New Quote
                                         </a>
                                     </div>
