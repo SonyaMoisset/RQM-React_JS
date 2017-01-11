@@ -1,19 +1,17 @@
 class App extends React.Component {
   render () {
     return (
-      <div className="edge-header blue-grey">
-        <div className="container free-bird">
-          <div className="row">
-            <div className="col-md-2"></div>
-            <div className="col-md-8">
-              <div className="card">
-                <QuoteImage />
-                <div className="card-block">
-                  <QuoteBody />
-                  <div className="row">
-                    <div className="col-md-6"><QuoteButton /></div>
-                    <div className="col-md-6"><QuoteTwitterButton /></div>
-                  </div>
+      <div className="container free-bird">
+        <div className="row">
+          <div className="col-md-2"></div>
+          <div className="col-md-8">
+            <div className="card">
+              <QuoteImage />
+              <div className="card-block">
+                <QuoteBody />
+                <div className="row">
+                  <div className="col-md-6"><QuoteButton /></div>
+                  <div className="col-md-6"><QuoteTwitterButton /></div>
                 </div>
               </div>
             </div>
@@ -44,7 +42,7 @@ class QuoteBody extends React.Component {
       <div>
         <blockquote className="blockquote blockquote-reverse">
           <h1 id="quote-body" className="card-text">
-            We are fsociety, we are finnaly free, we are finally awake!
+            We are fsociety, we are finally free, we are finally awake!
           </h1>
         </blockquote>
       </div>
