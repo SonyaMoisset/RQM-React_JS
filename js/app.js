@@ -50,12 +50,13 @@ class RandomQuoteMachine extends React.Component {
                                     src="img/cover.jpg"
                                     alt="Mr Robot" />
                                 <QuoteContainer quote={ this.state.quote } />
-                                <div className="row">
-                                    <div className="col-md-12">
-                                        <a className="btn btn-unique btn-lg btn-block btn-quote waves-effect waves-light" onClick={ this.setRandomQuote.bind(this) }>
+                                <div className="card-block row">
+                                    <div className="col-md-6">
+                                        <a className="btn btn-unique btn-lg btn-block waves-effect waves-light" onClick={ this.setRandomQuote.bind(this) }>
                                             New Quote
                                         </a>
                                     </div>
+                                    <Twitter quote={ this.state.quote } />
                                 </div>
                             </div>
                         </div>
@@ -74,6 +75,20 @@ class QuoteContainer extends React.Component {
                     <blockquote className="blockquote blockquote-reverse">
                         <h1 className="card-text body-quote">{ this.props.quote }</h1>
                     </blockquote>
+                </div>
+            </div>
+        )
+    }
+}
+
+class Twitter extends React.Component {
+    render () {
+        return (
+            <div>
+                <div className="col-md-6">
+                    <a href={ 'https://twitter.com/intent/tweet?text=' + this.props.quote } className="btn btn-tw btn-lg btn-block btn-info" target="_blank">
+                        <i className="fa fa-twitter"></i>
+                    </a>
                 </div>
             </div>
         )
